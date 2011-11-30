@@ -62,7 +62,7 @@ aside {
   background-color: #F0F0F0;
 }
 #slider {
-  text-align: center;
+  margin: 0 14%;
 }
 #slider img {
   border: solid 1px #CCC;
@@ -77,8 +77,19 @@ aside {
 .slide {
   float: left;
   margin-left: 50px;
+  background-repeat: none
 }
-
+#previous {
+  background-image: none;
+  background-repeat: none
+  width: 250px;
+  height: 250px;
+  float: left
+}
+#previous:hover {
+  background-image: url('/images/previous_overlay.png');
+}
+ 
 #previous:hover {
   opacity: 1;  
 }
