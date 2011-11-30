@@ -50,7 +50,7 @@ header ul {
 	background-color: white;
   float: left;
 	/* border-radius:5px; */
-	width: 960px;
+	width: 75%;
 	/*margin: 20px auto;*/
   /*border: thick solid black; */
  /* border-right: thick solid black;*/
@@ -99,7 +99,7 @@ article {
 footer{
 	  clear:both;
    	text-align:center;
-   	background-color: #800F25;
+   	/*background-color: #800F25;*/
     padding: 5px 0;
    	/* border-top: 5px solid #000000;*/
 

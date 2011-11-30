@@ -1,19 +1,18 @@
-=will_paginate @articles
 - if @articles.length > 0 then
   .articles
     - @articles.each do |article|
       - if @slider then
         #slider
           .slide#previous
-            %a{:href => "/?page=#{prevMonth(article.id)}"}
-              %img{:src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "#{prevMonth(article.id)}"}
+            %a{:href => "/?page=#{prevMonth(article.id)}#article"}
+              %img{:src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "Forrige måned"}
           .slide#current
-            %img{:src => "/images/months/#{article.id}.jpg", :alt => 'current'}
+            %img{:src => "/images/months/#{article.id}.jpg", :alt => "Bilde for #{article.title}"}
           .slide#next
-            %a{:href => "/?page=#{nextMonth(article.id)}"}
-              %img{:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "#{nextMonth(article.id)}"}
+            %a{:href => "/?page=#{nextMonth(article.id)}#article"}
+              %img{:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "Neste måned"}
     
-        %article
+        %article#article
           =article.content
       - elsif @list then
         %li
