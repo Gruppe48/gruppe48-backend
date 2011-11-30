@@ -62,7 +62,7 @@ aside {
   background-color: #F0F0F0;
 }
 #slider {
-  margin: 0 14%;
+  margin: 0 10px;
 }
 #slider img {
   border: solid 1px #CCC;
@@ -70,32 +70,49 @@ aside {
 }
 #slider img:hover {
   border-color: #999;
-}
+}/*
 #previous, #next {
   opacity: 0.2;
 }
+*/
 .slide {
-  float: left;
-  margin-left: 50px;
-  background-repeat: none
-}
-#previous {
-  background-image: none;
-  background-repeat: none
   width: 250px;
   height: 250px;
-  float: left
+  float: left;
+  margin-left: 50px;
+  position: relative;
+} 
+#next_overlay {
+  display: none;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: inherit;
+  height: inherit;
 }
-#previous:hover {
-  background-image: url('/images/previous_overlay.png');
+.slide:hover #next_overlay {
+  display: block;
+  background: url('/images/arrow_next.png') no-repeat;
 }
- 
-#previous:hover {
+#previous_overlay {
+  display: none;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: inherit;
+  height: inherit;
+}
+.slide:hover #previous_overlay {
+  display: block;
+  background: url('/images/arrow_previous.png') no-repeat;
+}
+
+/*#previous:hover {
   opacity: 1;  
 }
 #next:hover {
   opacity: 1;
-}
+}*/
 article {
   clear: both;
   padding-top: 20px;
