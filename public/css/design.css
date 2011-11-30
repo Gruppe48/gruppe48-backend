@@ -62,7 +62,7 @@ aside {
   background-color: #F0F0F0;
 }
 #slider {
-  margin: 0 auto;
+  text-align: center;
 }
 #slider img {
   border: solid 1px #CCC;
