@@ -26,9 +26,10 @@
         #logo
           %a{:href=>'/', :title => 'Hjem'}
             %img{:alt => "Nyhetsbildet 2011", :src => "/images/logo.png"}/
-      %section#content= yield
       %aside
         = haml :sidebar
+      %section#content= yield
+      
       %footer
         #validering
           %p

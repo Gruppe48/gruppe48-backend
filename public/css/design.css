@@ -18,7 +18,7 @@ header{
   background-color: #800F25;
 	height: 105px;
 	color: gray;
-	border-bottom: 5px solid #000000;
+	/*border-bottom: 5px solid #000000;*/
 }
 
 #logo img{
@@ -53,12 +53,13 @@ header ul {
 	width: 960px;
 	/*margin: 20px auto;*/
   /*border: thick solid black; */
-  padding: 20px;
-  border-right: thick solid black;
+ /* border-right: thick solid black;*/
 }
 aside {
   float: left;
   margin: 20px;
+  width: 200px;
+  background-color: #F0F0F0;
 }
 #slider {
   margin: 0 auto;
@@ -93,13 +94,13 @@ article {
 }
 .pagination {
   text-align: center;
-  margin: 5px 0;
+  margin-bottom: 20px;
 }
 footer{
 	  clear:both;
    	text-align:center;
    	background-color: #800F25;
-    padding-bottom: 5px;
-   	border-top: 5px solid #000000;
+    padding: 5px 0;
+   	/* border-top: 5px solid #000000;*/
 
 }
