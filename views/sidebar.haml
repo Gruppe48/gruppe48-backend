@@ -1,0 +1,5 @@
+- if @sidebar
+  %ol
+  - @sidebar.each do |a|
+    %li
+      %a{:href => "/?page=#{a.id}"}= a.title

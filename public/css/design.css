@@ -1,0 +1,105 @@
+body{
+	background: white;
+	font-size: 14px;
+	font-family: Georgia, Ubuntu, serif;
+	margin: 0;
+ }
+label{
+  display:inline-block;
+  width:100px;
+  margin:5px 0;
+}
+#main_box{
+	margin: 0 auto;
+}
+
+header{
+	clear: both;
+  background-color: #800F25;
+	height: 105px;
+	color: gray;
+	border-bottom: 5px solid #000000;
+}
+
+#logo img{
+  float: right;
+}
+
+header ul {
+  	margin: 0 auto;
+  	list-style: none;
+}
+
+#navigation a:hover {
+  	color: black;
+}
+
+
+#navigation ul li a{
+    float: left;
+    font-size:24px;
+    font-variant: small-caps;
+    margin: 0px 20px;
+    padding: 60px 0px 0px 0px;
+    color: white;
+    text-decoration: none;  
+}
+
+#content{
+  text-align: left;
+	background-color: white;
+  float: left;
+	/* border-radius:5px; */
+	width: 960px;
+	/*margin: 20px auto;*/
+  /*border: thick solid black; */
+  padding: 20px;
+  border-right: thick solid black;
+}
+aside {
+  float: left;
+  margin: 20px;
+}
+#slider {
+  margin: 0 auto;
+}
+#slider img {
+  border: solid 1px #CCC;
+  padding: 5px;
+}
+#slider img:hover {
+  border-color: #999;
+}
+#previous, #next {
+  opacity: 0.2;
+}
+.slide {
+  float: left;
+  margin-left: 50px;
+}
+
+#previous:hover {
+  opacity: 1;  
+}
+#next:hover {
+  opacity: 1;
+}
+article {
+  clear: both;
+  padding-top: 20px;
+  margin: 0 50px;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+.pagination {
+  text-align: center;
+  margin: 5px 0;
+}
+footer{
+	  clear:both;
+   	text-align:center;
+   	background-color: #800F25;
+    padding-bottom: 5px;
+   	border-top: 5px solid #000000;
+
+}

@@ -1,0 +1,12 @@
+#contact-form
+  %form(action='/contact' method='POST')
+    %label(for='email') E-post:
+    %input(type='email' name='email' value="" required)
+    %br/
+    %label(for='name') Navn:
+    %input(type='text' name='name' value="Anonym" required)
+    %br/
+    %label(for='content') Melding:
+    %textarea(name='content' cols=40 rows=6 value="" required)
+    %br/
+    %input(type='submit')

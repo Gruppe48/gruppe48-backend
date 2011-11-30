@@ -9,7 +9,8 @@ gem 'dm-validations'
 gem 'dm-aggregates'
 gem 'dm-migrations'
 gem 'haml'
-
+gem 'will_paginate', '~> 3.0', :git => 'git://github.com/mislav/will_paginate.git'
+gem 'pony'
 group :test do
   gem 'rspec', :require => 'spec'
   gem 'rack-test'

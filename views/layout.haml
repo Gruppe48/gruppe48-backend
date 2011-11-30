@@ -1,14 +1,39 @@
 !!!
 %html
   %head
-    %title= @title || SiteConfig.title
-    %link{:href => '/main.css', :rel => 'stylesheet', :type => 'text/css'}
+    %title Nyhetsbildet 2011
+    %meta{:charset => "utf-8"}/
+    %link{:href => "/css/normalize.min.css", :rel => "stylesheet"}/
+    %link{:href => "/css/design.css", :rel => "stylesheet"}/
+    %link{:href => "/css/css3.css", :rel => "stylesheet"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&amp;subset=Latin", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"}
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
   %body
-    #container
-      #header
+    #main_box
+      %header
+        #navigation
+          %ul
+            %li
+              %a{:href => "/"} Hjem
+            %li
+              %a{:href => "/contact"} Kontakt
+            %li
+              %a{:href => "/about"} Om oss
+            %li
+              %a#biggertext{:title => "Større tekst"} A+
+              %a#smallertext{:title => "Mindre tekst"} a-   
         #logo
-          %h1
-            %a{:href => '/'}= SiteConfig.title
-      #content= yield
-      #footer
-        %p#legal= "&mdash; &copy; #{Time.now.strftime('%Y')} #{SiteConfig.author} &mdash;"
+          %a{:href=>'/', :title => 'Hjem'}
+            %img{:alt => "Nyhetsbildet 2011", :src => "/images/logo.png"}/
+      %section#content= yield
+      %aside
+        = haml :sidebar
+      %footer
+        #validering
+          %p
+            %a{:href => "http://jigsaw.w3.org/css-validator/check/referer?profile=css3"}
+              %img{:src => "http://jigsaw.w3.org/css-validator/images/vcss", :alt => "Valid CSS!"}
+            %a{:href=> "http://validator.w3.org/check?uri=referer"}
+              %img{:src => "/images/html5.png", :alt => "Valid HTML5!"}
+    %script{:src => "/javascript/fontsizer.js"}

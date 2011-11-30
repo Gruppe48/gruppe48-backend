@@ -1,0 +1,28 @@
+=will_paginate @articles
+- if @articles.length > 0 then
+  .articles
+    - @articles.each do |article|
+      - if @slider then
+        #slider
+          .slide#previous
+            %a{:href => "/?page=#{prevMonth(article.id)}"}
+              %img{:src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "#{prevMonth(article.id)}"}
+          .slide#current
+            %img{:src => "/images/months/#{article.id}.jpg", :alt => 'current'}
+          .slide#next
+            %a{:href => "/?page=#{nextMonth(article.id)}"}
+              %img{:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "#{nextMonth(article.id)}"}
+    
+        %article
+          =article.content
+      - elsif @list then
+        %li
+          %a{:href => "/article/#{article.id}"}
+            =article.title
+      - elsif @full then
+        %article  
+          %h1= article.title
+          =article.content
+        
+- else      
+  %p Det finnes ingen artikler!
