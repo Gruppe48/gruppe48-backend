@@ -3,14 +3,14 @@
     - @articles.each do |article|
       - if @slider then
         #slider
-          .slide#previous
+          .slide
             %a{:href => "/?page=#{prevMonth(article.id)}#article"}
-              %img{:src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "Forrige måned"}
+              %img#previous{:src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "Forrige måned"}
           .slide#current
             %img{:src => "/images/months/#{article.id}.jpg", :alt => "Bilde for #{article.title}"}
-          .slide#next
+          .slide
             %a{:href => "/?page=#{nextMonth(article.id)}#article"}
-              %img{:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "Neste måned"}
+              %img#next{:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "Neste måned"}
     
         %article#article
           =article.content
