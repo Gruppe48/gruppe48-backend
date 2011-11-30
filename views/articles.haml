@@ -3,17 +3,16 @@
     - @articles.each do |article|
       - if @slider then
         #slider
-          .slide
-            //%a{:href => "/?page=#{prevMonth(article.id)}#article"}
-            %img#previous{:src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "Forrige måned"}
-            #previous_overlay
-                
+          %a#previous{:href => "/?page=#{prevMonth(article.id)}#article"}
+            .slide
+              %img{:src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "Forrige måned"}
+              #previous_overlay    
           .slide#current
             %img{:src => "/images/months/#{article.id}.jpg", :alt => "Bilde for #{article.title}"}
-          .slide
-            %a{:href => "/?page=#{nextMonth(article.id)}#article"}
-              %img#next{:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "Neste måned"}
-            #next_overlay
+          %a{:href => "/?page=#{nextMonth(article.id)}#article"}
+            .slide#next
+              %img{:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "Neste måned"}
+              #next_overlay
     
         %article#article
           =article.content
