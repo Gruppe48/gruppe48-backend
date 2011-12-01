@@ -11,6 +11,7 @@ gem 'dm-migrations'
 gem 'haml'
 gem 'will_paginate', '~> 3.0', :git => 'git://github.com/mislav/will_paginate.git'
 gem 'pony'
+gem 'unicorn'
 group :test do
   gem 'rspec', :require => 'spec'
   gem 'rack-test'
