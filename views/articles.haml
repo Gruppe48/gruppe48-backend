@@ -1,28 +1,28 @@
 - if @articles.length > 0 then
-  .articles
-    - @articles.each do |article|
-      - if @slider then
-        #slider
-          %a{:href => "/?page=#{prevMonth(article.id)}"}
-            .slide#previous
-              %img{:src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "Forrige måned"}
-              #previous_overlay    
-          .slide#current
-            %img{:src => "/images/months/#{article.id}.jpg", :alt => "Bilde for #{article.title}"}
-            #current_label
-              =article.title
-          %a{:href => "/?page=#{nextMonth(article.id)}"}
-            .slide#next
-              %img{:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "Neste måned"}
-              #next_overlay
-    
+  - @articles.each do |article|
+    - if @slider then
+      #slider
+        %a{:href => "/?page=#{prevMonth(article.id)}"}
+          .slide#previous
+            %img{:src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "Forrige måned"}
+            #previous_overlay    
+        .slide#current
+          %img{:src => "/images/months/#{article.id}.jpg", :alt => "Bilde for #{article.title}"}
+          #current_label
+            =article.title
+        %a{:href => "/?page=#{nextMonth(article.id)}"}
+          .slide#next
+            %img{:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "Neste måned"}
+            #next_overlay
+      .articles
         %article#article
           =article.content
-      - elsif @list then
-        %li
-          %a{:href => "/article/#{article.id}"}
-            =article.title
-      - elsif @full then
+    - elsif @list then
+      %li
+        %a{:href => "/article/#{article.id}"}
+          =article.title
+    - elsif @full then
+      .articles
         %article  
           %h1= article.title
           =article.content
