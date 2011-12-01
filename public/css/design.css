@@ -86,6 +86,10 @@ a .slide:hover {
   margin-left: 50px;
   position: relative;
 } 
+#current_label {
+  position: relative;
+  left: 45%;
+}
 #next_overlay {
   display: none;
   position: absolute;
