@@ -15,8 +15,8 @@ require 'sinatra' unless defined?(Sinatra)
 configure do
   SiteConfig = OpenStruct.new(
                  :title => 'Nyhetsbildet 2011',
-                 :author => 'Kristoffer Berdal',
-                 :url_base => 'http://localhost:4567/'
+                 :author => 'Gruppe 48',
+                 :url_base => 'http://nyheter.flexd.net'
                )
 
   # load models
