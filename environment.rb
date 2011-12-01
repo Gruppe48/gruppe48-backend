@@ -25,6 +25,7 @@ configure do
 
   DataMapper.setup(:default, (ENV["DATABASE_URL"] || "sqlite3:///#{File.expand_path(File.dirname(__FILE__))}/#{Sinatra::Base.environment}.db"))
   # Pony (EPOST)
+
   Pony.options = { :from => 'nyhetsbildet@gmail.com',  :via => :smtp, :via_options => {
     :address              => 'smtp.gmail.com',
     :port                 => '587',
