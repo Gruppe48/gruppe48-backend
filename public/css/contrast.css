@@ -1,5 +1,5 @@
 body{
-	background: white;
+	background: black;
 	font-size: 14px;
 	font-family: Georgia, Ubuntu, serif;
 	margin: 0;
@@ -41,14 +41,15 @@ header ul {
     font-variant: small-caps;
     margin: 0px 20px;
     padding: 60px 0px 0px 0px;
-    color: white;
+    color: yellow;
     text-decoration: none;  
 }
 
 #content{
+ color: green;
   margin-top: 15px;
   text-align: left;
-	background-color: white;
+	background-color: black;
   float: left;
 	/* border-radius:5px; */
 	width: 75%;
@@ -61,17 +62,6 @@ aside {
   margin: 20px;
   width: 200px;
   background-color: #F0F0F0;
-}
-a {
-  color: #800F25;
-  font-size: 16px;  
-}
-aside li {
-  margin: 5px;
-}
-a:hover {
-  color: #333333;
-  font-weight: bold;
 }
 #slider {
   margin: 0 10px;
@@ -97,10 +87,6 @@ a .slide:hover {
   margin-left: 50px;
   position: relative;
 } 
-#current_label {
-  position: relative;
-  left: 45%;
-}
 #next_overlay {
   display: none;
   position: absolute;
@@ -129,11 +115,12 @@ a .slide:hover {
   background: url('/images/arrow_previous.png') no-repeat;
 }
 
-
-.articles {
-  width: 800px;
-  margin: 0 auto;
+/*#previous:hover {
+  opacity: 1;  
 }
+#next:hover {
+  opacity: 1;
+}*/
 article {
   clear: both;
   padding-top: 20px;
