@@ -70,11 +70,14 @@ aside {
 }
 #slider img:hover {
   border-color: #999;
-}/*
-#previous, #next {
-  opacity: 0.2;
 }
-*/
+a .slide {
+  opacity: 0.4;
+}
+a .slide:hover {
+  opacity: 1;
+}
+
 .slide {
   width: 250px;
   height: 250px;
@@ -89,6 +92,9 @@ aside {
   left: 5px;
   width: inherit;
   height: inherit;
+}
+.slide:hover #next {
+  opacity: 1;
 }
 .slide:hover #next_overlay {
   display: block;

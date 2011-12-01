@@ -26,12 +26,12 @@ configure do
   DataMapper.setup(:default, (ENV["DATABASE_URL"] || "sqlite3:///#{File.expand_path(File.dirname(__FILE__))}/#{Sinatra::Base.environment}.db"))
   # Pony (EPOST)
   Pony.options = { :from => 'noreply@flexd.net',  :via => :smtp, :via_options => {
-    :address              => 'mail.flexd.net',
-    :port                 => '571',
-    :enable_starttls_auto => false,
+    :address              => 'alpha.ninjabox.net',
+    :port                 => '465',
+    :enable_starttls_auto => true,
     :user_name            => 'gruppe48+flexd.net',
     :password             => '4FD6s1mwXi',
-    :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
+    :authentication       => :login, # :plain, :login, :cram_md5, no auth by default
     :domain               => "flexd.net" # the HELO domain provided by the client to the server
     }
   }
