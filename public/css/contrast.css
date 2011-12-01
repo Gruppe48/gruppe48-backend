@@ -1,5 +1,5 @@
 body{
-	background: white;
+	background: black;
 	font-size: 14px;
 	font-family: Georgia, Ubuntu, serif;
 	margin: 0;
@@ -41,14 +41,15 @@ header ul {
     font-variant: small-caps;
     margin: 0px 20px;
     padding: 60px 0px 0px 0px;
-    color: white;
+    color: yellow;
     text-decoration: none;  
 }
 
 #content{
+ color: green;
   margin-top: 15px;
   text-align: left;
-	background-color: white;
+	background-color: black;
   float: left;
 	/* border-radius:5px; */
 	width: 75%;
