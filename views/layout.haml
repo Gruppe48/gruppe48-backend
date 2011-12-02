@@ -14,7 +14,6 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %meta{:name => 'description', :content => "Nyhetsbildet 2011 gir deg et raskt overblikk over de viktigste hendelsene i året som har gått."}
     %meta{:name => 'keywords', :content => 'nyheter, 2011, arkiv, gruppe48'}
-    %meta{:name => 'language', :content => 'nb'}
     %link{:rel => 'shortcut', :href => 'favicon.ico'}
   %body
     #main_box
@@ -34,7 +33,7 @@
               %a#smallertext{:title => "Mindre tekst"} a-   
         #logo
           %a{:href=>'/', :title => 'Hjem'}
-            %img{:width=> '350px', :height => '110px',:alt => "Nyhetsbildet 2011", :src => "/images/logo.png"}/
+            %img{:width=> '350', :height => '110',:alt => "Nyhetsbildet 2011", :src => "/images/logo.png"}/
       %aside
         = haml :sidebar
       %section#content= yield
@@ -43,8 +42,8 @@
         #validering
           %p
             %a{:href => "http://jigsaw.w3.org/css-validator/check/referer?profile=css3"}
-              %img{:width=> '88px', :height => '31px', :src => "http://jigsaw.w3.org/css-validator/images/vcss", :alt => "Valid CSS!"}
+              %img{:width=> '88', :height => '31', :src => "http://jigsaw.w3.org/css-validator/images/vcss", :alt => "Valid CSS!"}
             %a{:href=> "http://validator.w3.org/check?uri=referer"}
-              %img{:width=> '32px', :height => '32px',:src => "/images/html5.png", :alt => "Valid HTML5!"}
+              %img{:width=> '32', :height => '32',:src => "/images/html5.png", :alt => "Valid HTML5!"}
     %script{:src => "/javascript/fontsizer.js"}
 

@@ -6,16 +6,20 @@
       #slider
         %a{:href => "/?page=#{prevMonth(article.id)}"}
           .slide#previous
-            %img{:width => '250px', :height => '250px', :src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "Forrige måned"}
-            #previous_overlay    
+            %img{:width => '250', :height => '250', :src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "Forrige måned"}
+            #previous_overlay
+            #prevlabel
+              Forrige måned   
         .slide#current
-          %img{:width => '250px', :height => '250px',:src => "/images/months/#{article.id}.jpg", :alt => "Bilde for #{article.title}"}
-          #current_label
+          %img{:width => '250', :height => '250',:src => "/images/months/#{article.id}.jpg", :alt => "Bilde for #{article.title}"}
+          #currentlabel
             =article.title
         %a{:href => "/?page=#{nextMonth(article.id)}"}
           .slide#next
-            %img{:width => '250px', :height => '250px',:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "Neste måned"}
+            %img{:width => '250', :height => '250',:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "Neste måned"}
             #next_overlay
+            #nextlabel
+              Neste måned
       .articles
         %article#article
           =article.content

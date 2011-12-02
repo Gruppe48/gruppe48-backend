@@ -3,14 +3,14 @@
   %p Vi i Nyhetsbildet 2011 ønsker gjerne å høre din mening om hva du synes om siden vår. Noen artikler du er uenig i? Noe som er bra/dårlig? Si oss din mening! 
   %form(action='/contact' method='POST' id='contact')
     %label(for='email') E-post:
-    %input(type='email' id='email' value="" required)
+    %input(type='email' name='email' id='email' value="" required)
     %br/
     %label(for='name') Navn:
-    %input(type='text' id='name' value="Anonym" required)
+    %input(type='text' name='name' id='name' value="Anonym" required)
     %br/
     %label(for='body') Melding:
-    %textarea(id='body' cols=40 rows=6 value="" required)
+    %textarea(id='body' name='body' cols=40 rows=6 value="" required)
     %br/
     %label(for='submit') Send eposten!
     %br/
-    %input(id='submit' type='submit' value='Send epost')
+    %input(id='submit' name='submit' type='submit' value='Send epost')

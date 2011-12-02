@@ -42,7 +42,7 @@ get '/contact' do
 end
 post '/contact' do
   Pony.mail(:to => params[:email], :subject => 'Takk for at du kontakter oss!', :html_body => haml(:email, :layout => false))
-  Pony.mail(:to => 'gruppe48@flexd.net', :subject => 'Kontakt', :html_body => params[:body])
+  Pony.mail(:to => 'nyhetsbildet@gmail.com', :from => params[:email], :subject => 'Kontakt', :html_body => haml(:incoming_email, :layout => false))
   redirect '/contact'
 end
 # root page
