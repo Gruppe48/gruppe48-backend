@@ -1,18 +1,20 @@
 - if @articles.length > 0 then
   - @articles.each do |article|
+    - if !@forsiden then
+      - @title = article.title
     - if @slider then
       #slider
         %a{:href => "/?page=#{prevMonth(article.id)}"}
           .slide#previous
-            %img{:src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "Forrige måned"}
+            %img{:width => '250px', :height => '250px', :src => "/images/months/#{prevMonth(article.id)}.jpg", :alt => "Forrige måned"}
             #previous_overlay    
         .slide#current
-          %img{:src => "/images/months/#{article.id}.jpg", :alt => "Bilde for #{article.title}"}
+          %img{:width => '250px', :height => '250px',:src => "/images/months/#{article.id}.jpg", :alt => "Bilde for #{article.title}"}
           #current_label
             =article.title
         %a{:href => "/?page=#{nextMonth(article.id)}"}
           .slide#next
-            %img{:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "Neste måned"}
+            %img{:width => '250px', :height => '250px',:src => "/images/months/#{nextMonth(article.id)}.jpg", :alt => "Neste måned"}
             #next_overlay
       .articles
         %article#article

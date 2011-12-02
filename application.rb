@@ -28,19 +28,26 @@ helpers do
     return @id
   end
 end
+get '/sitemap' do
+  @title = "Sitemap"
+  haml :sitemap
+end
 get '/about' do
+  @title = "Om oss!"
   haml :about
 end
 get '/contact' do
+  @title = "Kontakt oss!"
   haml :contact
 end
 post '/contact' do
   Pony.mail(:to => params[:email], :subject => 'Takk for at du kontakter oss!', :html_body => haml(:email, :layout => false))
-  Pony.mail(:to => 'gruppe48@flexd.net', :subject => 'Kontakt', :html_body => params[:content])
+  Pony.mail(:to => 'gruppe48@flexd.net', :subject => 'Kontakt', :html_body => params[:body])
   redirect '/contact'
 end
 # root page
 get '/' do
+  @forsiden = true if !params[:page]
   @sidebar = Article.all
   @articles = Article.paginate(:page => params[:page], :per_page => 1)
   @slider = true

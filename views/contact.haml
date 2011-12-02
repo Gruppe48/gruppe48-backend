@@ -1,14 +1,16 @@
 #contact-form
   %h1 Kontakt
   %p Vi i Nyhetsbildet 2011 ønsker gjerne å høre din mening om hva du synes om siden vår. Noen artikler du er uenig i? Noe som er bra/dårlig? Si oss din mening! 
-  %form(action='/contact' method='POST')
+  %form(action='/contact' method='POST' id='contact')
     %label(for='email') E-post:
-    %input(type='email' name='email' value="" required)
+    %input(type='email' id='email' value="" required)
     %br/
     %label(for='name') Navn:
-    %input(type='text' name='name' value="Anonym" required)
+    %input(type='text' id='name' value="Anonym" required)
     %br/
-    %label(for='content') Melding:
-    %textarea(name='content' cols=40 rows=6 value="" required)
+    %label(for='body') Melding:
+    %textarea(id='body' cols=40 rows=6 value="" required)
     %br/
-    %input(type='submit')
+    %label(for='submit') Send eposten!
+    %br/
+    %input(id='submit' type='submit' value='Send epost')
